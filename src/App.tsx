@@ -72,7 +72,10 @@ export default function App() {
         </div>
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="bg-solar-dark rounded-[3rem] p-8 lg:p-16 flex flex-col lg:flex-row gap-12 items-center border-b-8 border-solar-orange shadow-2xl">
-            <div className="w-full lg:w-1/2 space-y-8">
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className="w-full lg:w-1/2 bg-white/5 p-8 rounded-3xl border border-white/10 space-y-8"
+            >
               <div className="space-y-4">
                 <label className="text-white font-bold block">Valor da sua conta mensal:</label>
                 <div className="text-4xl font-black text-solar-orange">{valorContaFormatado}</div>
@@ -86,8 +89,11 @@ export default function App() {
                   className="w-full h-3 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-solar-orange" 
                 />
               </div>
-            </div>
-            <div className="w-full lg:w-1/2 bg-white/5 p-8 rounded-3xl text-center border border-white/10">
+            </motion.div>
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className="w-full lg:w-1/2 bg-white/5 p-8 rounded-3xl text-center border border-white/10"
+            >
               <p className="text-gray-400 uppercase text-xs font-bold tracking-widest mb-2">Economia em 25 Anos</p>
               <motion.div
                 key={contaMensal}
@@ -104,7 +110,7 @@ export default function App() {
               >
                 RECEBER MEU PROJETO GRÁTIS
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
