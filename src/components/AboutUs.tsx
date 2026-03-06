@@ -23,16 +23,22 @@ export default function AboutUs() {
               <p className="text-solar-dark dark:text-white font-bold text-lg">Compromisso com você</p>
               <p className="text-gray-500 dark:text-gray-400 text-sm">Márcio Gonçalves - Fundador</p>
               <p className="text-solar-orange font-bold text-xs uppercase mt-1 tracking-wider">Técnico em Eletrotécnica</p>
-              <p className="text-solar-dark dark:text-white text-xs font-bold uppercase mt-2 tracking-wider inline-flex items-center gap-2 bg-gray-100 dark:bg-white/10 px-3 py-1 rounded-full">
-                <i className="fas fa-id-card text-solar-orange"></i>
-                Com Registro Técnico do CFT
-              </p>
+              <div className="flex flex-wrap justify-center gap-2 mt-3">
+                <span className="text-solar-dark dark:text-white text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2 bg-gray-100 dark:bg-white/10 px-3 py-1 rounded-full">
+                  <i className="fas fa-id-card text-solar-orange"></i>
+                  Registro CFT
+                </span>
+                <span className="text-solar-dark dark:text-white text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2 bg-gray-100 dark:bg-white/10 px-3 py-1 rounded-full">
+                  <i className="fas fa-hard-hat text-solar-orange"></i>
+                  NR10 & NR35
+                </span>
+              </div>
             </div>
             
-            {/* Experience Badge */}
-            <div className="absolute -bottom-6 -right-6 bg-solar-orange text-white p-6 rounded-2xl shadow-xl z-20 hidden md:block animate-bounce-slow">
-              <p className="text-4xl font-black">100%</p>
-              <p className="text-xs font-bold uppercase tracking-wider">Satisfação</p>
+            {/* Safe Installation Badge */}
+            <div className="absolute -bottom-6 -right-6 bg-green-500 text-white p-4 lg:p-6 rounded-2xl shadow-xl z-20 hidden md:flex flex-col items-center text-center animate-bounce-slow border-4 border-white dark:border-solar-dark">
+              <i className="fas fa-shield-alt text-3xl mb-1"></i>
+              <p className="text-xs font-bold uppercase tracking-wider">Instalação<br/>Segura</p>
             </div>
           </div>
 

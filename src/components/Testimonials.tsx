@@ -8,31 +8,31 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: "Carlos Eduardo",
-      location: "Fortaleza, CE",
+      location: "Juazeiro do Norte, CE",
       quote: "A melhor decisão que tomei para minha casa. A conta de energia caiu de R$ 800 para a taxa mínima. O atendimento da MgS foi impecável do início ao fim.",
       role: "Residencial"
     },
     {
       name: "Ana Paula Souza",
-      location: "Sobral, CE",
+      location: "Crato, CE",
       quote: "Instalei na minha empresa e o retorno foi muito rápido. A equipe técnica é muito qualificada e deixou tudo limpo e organizado. Recomendo demais!",
       role: "Comercial"
     },
     {
       name: "Roberto Mendes",
-      location: "Juazeiro do Norte, CE",
+      location: "Barbalha, CE",
       quote: "Estava com receio da obra, mas foi tudo muito rápido. Em 2 dias estava tudo funcionando. Hoje vejo o sol e só penso na economia que estou fazendo.",
       role: "Residencial"
     },
     {
       name: "Mariana Costa",
-      location: "Crato, CE",
+      location: "Juazeiro do Norte, CE",
       quote: "Excelente investimento! A equipe me explicou tudo detalhadamente e o pós-venda é sensacional. Minha conta zerou praticamente.",
       role: "Residencial"
     },
     {
       name: "Ricardo Oliveira",
-      location: "Caucaia, CE",
+      location: "Crato, CE",
       quote: "Profissionalismo nota 10. O sistema está gerando mais do que o prometido. Muito satisfeito com a MgS System Solar.",
       role: "Comercial"
     }
@@ -66,9 +66,9 @@ export default function Testimonials() {
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-gray-50 to-white dark:from-solar-card dark:to-solar-dark -z-10"></div>
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-16">
-          <span className="text-solar-orange font-bold tracking-[0.2em] text-sm uppercase">Depoimentos</span>
+          <span className="text-solar-orange font-bold tracking-[0.2em] text-sm uppercase">Prova Social</span>
           <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-6 text-solar-dark dark:text-white">Quem usa, <span className="text-solar-orange underline decoration-solar-orange/30">recomenda</span></h2>
-          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">Veja o que nossos clientes estão dizendo sobre a economia e o atendimento da MgS System Solar.</p>
+          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">Veja o que nossos clientes de Juazeiro, Crato e Barbalha estão dizendo sobre a economia real.</p>
         </div>
         
         <div className="relative">
@@ -103,7 +103,9 @@ export default function Testimonials() {
                       </div>
                       <div>
                         <h4 className="font-bold text-solar-dark dark:text-white">{testimonial.name}</h4>
-                        <p className="text-xs text-gray-400 uppercase tracking-wider">{testimonial.location}</p>
+                        <p className="text-xs text-gray-400 uppercase tracking-wider flex items-center gap-1">
+                          <i className="fas fa-map-marker-alt text-solar-orange"></i> {testimonial.location}
+                        </p>
                       </div>
                     </div>
                   </motion.div>

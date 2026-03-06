@@ -25,20 +25,22 @@ export default function Hero() {
           style={{ y: yText }} 
           className="lg:w-1/2 text-center lg:text-left"
         >
-          <span className="text-solar-orange font-bold tracking-[0.2em] text-sm uppercase">Energia Inteligente</span>
+          <span className="text-solar-orange font-bold tracking-[0.2em] text-sm uppercase">A Energia que Move o Cariri</span>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-4xl lg:text-6xl font-extrabold mt-4 mb-6 leading-tight"
           >
-            Transforme o Sol em <br /><span className="text-solar-orange underline decoration-solar-orange/30 dark:decoration-white/20">Economia Real</span>
+            Transforme Sol em <br /><span className="text-solar-orange underline decoration-solar-orange/30 dark:decoration-white/20">Liberdade Financeira</span>
           </motion.h1>
           <p className="text-gray-500 dark:text-gray-400 text-lg mb-10 max-w-xl mx-auto lg:mx-0">
-            Reduza sua conta de luz em até 95%. Projetos personalizados da MgS System Solar para <strong>Juazeiro do Norte e toda a região do Cariri</strong> com tecnologia de ponta e garantia de 25 anos.
+            A MgS System Solar é líder em Juazeiro do Norte e região. Instalação segura com equipe certificada NR10/NR35 e garantia de 25 anos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-            <a href="#calculadora" className="bg-solar-orange text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition shadow-xl text-center hover:bg-orange-600">SIMULAR ECONOMIA</a>
+            <a href="#calculadora" className="bg-solar-orange text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition shadow-xl text-center hover:bg-orange-600 uppercase tracking-wide">
+              Simular Minha Economia
+            </a>
             <a href="https://wa.me/message/24V75JFH4PNMB1" target="_blank" rel="noopener noreferrer" className="border-2 border-gray-200 dark:border-gray-700 px-8 py-4 rounded-xl font-bold text-lg hover:border-solar-orange dark:hover:border-solar-orange transition flex items-center justify-center gap-2 text-gray-700 dark:text-white">
               <i className="fab fa-whatsapp text-green-500"></i> Falar com Especialista
             </a>
@@ -55,7 +57,7 @@ export default function Hero() {
           <img 
             src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=800" 
             className="rounded-3xl shadow-2xl border-4 border-white dark:border-white/5 w-full" 
-            alt="Painéis Solares MgS" 
+            alt="Painéis Solares MgS em Juazeiro do Norte" 
             referrerPolicy="no-referrer"
             fetchPriority="high"
           />

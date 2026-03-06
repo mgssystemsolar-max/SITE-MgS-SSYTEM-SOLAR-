@@ -19,6 +19,7 @@ const FAQ = lazy(() => import('./components/FAQ'));
 const PostSales = lazy(() => import('./components/PostSales'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
+const ProjectStatus = lazy(() => import('./components/ProjectStatus'));
 
 export default function App() {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -47,16 +48,17 @@ export default function App() {
       <Hero />
 
       <Suspense fallback={<div className="py-20 text-center text-gray-400">Carregando...</div>}>
-        <AboutUs />
-        <Partners />
         <Calculator />
+        <SolarGuide />
+        <Partners />
+        <AboutUs />
+        <ProjectStatus />
+        <Testimonials />
+        <Portfolio isAdmin={isAdmin} />
+        <Expertise />
         <Certifications />
         <RegionalImpact />
-        <SolarGuide />
-        <Portfolio isAdmin={isAdmin} />
         <Blog />
-        <Testimonials />
-        <Expertise />
         <SolarKnowledge />
         <FAQ />
         <PostSales />
