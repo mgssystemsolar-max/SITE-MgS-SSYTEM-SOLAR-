@@ -45,7 +45,7 @@ export default function Portfolio({ isAdmin }: PortfolioProps) {
   };
 
   return (
-    <section className="py-24 bg-white dark:bg-solar-dark transition-colors duration-300">
+    <section id="projetos" className="py-24 bg-white dark:bg-solar-dark transition-colors duration-300">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-solar-orange font-bold tracking-[0.2em] text-sm uppercase">Nosso Portfólio</span>

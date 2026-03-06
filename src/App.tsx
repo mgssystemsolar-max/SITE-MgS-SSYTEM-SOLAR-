@@ -5,9 +5,12 @@ import BackToTop from './components/BackToTop';
 
 // Lazy load below-the-fold components for better initial load performance
 const Partners = lazy(() => import('./components/Partners'));
+const AboutUs = lazy(() => import('./components/AboutUs'));
 const Calculator = lazy(() => import('./components/Calculator'));
 const Certifications = lazy(() => import('./components/Certifications'));
 const RegionalImpact = lazy(() => import('./components/RegionalImpact'));
+const SolarGuide = lazy(() => import('./components/SolarGuide'));
+const Blog = lazy(() => import('./components/Blog'));
 const Portfolio = lazy(() => import('./components/Portfolio'));
 const Testimonials = lazy(() => import('./components/Testimonials'));
 const Expertise = lazy(() => import('./components/Expertise'));
@@ -44,11 +47,14 @@ export default function App() {
       <Hero />
 
       <Suspense fallback={<div className="py-20 text-center text-gray-400">Carregando...</div>}>
+        <AboutUs />
         <Partners />
         <Calculator />
         <Certifications />
         <RegionalImpact />
+        <SolarGuide />
         <Portfolio isAdmin={isAdmin} />
+        <Blog />
         <Testimonials />
         <Expertise />
         <SolarKnowledge />
