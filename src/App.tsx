@@ -158,6 +158,69 @@ export default function App() {
         </div>
       </section>
 
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-gray-50 to-white -z-10"></div>
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="text-center mb-16">
+            <span className="text-solar-orange font-bold tracking-[0.2em] text-sm uppercase">Depoimentos</span>
+            <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-6 text-solar-dark">Quem usa, <span className="text-solar-orange underline decoration-solar-orange/30">recomenda</span></h2>
+            <p className="text-gray-500 max-w-2xl mx-auto text-lg">Veja o que nossos clientes estão dizendo sobre a economia e o atendimento da MgS System Solar.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Carlos Eduardo",
+                location: "Fortaleza, CE",
+                quote: "A melhor decisão que tomei para minha casa. A conta de energia caiu de R$ 800 para a taxa mínima. O atendimento da MgS foi impecável do início ao fim.",
+                role: "Residencial"
+              },
+              {
+                name: "Ana Paula Souza",
+                location: "Sobral, CE",
+                quote: "Instalei na minha empresa e o retorno foi muito rápido. A equipe técnica é muito qualificada e deixou tudo limpo e organizado. Recomendo demais!",
+                role: "Comercial"
+              },
+              {
+                name: "Roberto Mendes",
+                location: "Juazeiro do Norte, CE",
+                quote: "Estava com receio da obra, mas foi tudo muito rápido. Em 2 dias estava tudo funcionando. Hoje vejo o sol e só penso na economia que estou fazendo.",
+                role: "Residencial"
+              }
+            ].map((testimonial, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                whileHover={{ y: -10 }}
+                className="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 flex flex-col h-full relative group"
+              >
+                <div className="absolute top-6 right-8 text-6xl text-solar-orange/10 font-serif leading-none group-hover:text-solar-orange/20 transition-colors">"</div>
+                <div className="flex-grow">
+                  <div className="flex items-center gap-2 mb-4">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <i key={star} className="fas fa-star text-solar-orange text-sm"></i>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 italic mb-6 relative z-10 leading-relaxed">"{testimonial.quote}"</p>
+                </div>
+                <div className="flex items-center gap-4 mt-auto pt-6 border-t border-gray-100">
+                  <div className="w-12 h-12 bg-solar-dark rounded-full flex items-center justify-center text-white font-bold text-xl">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-solar-dark">{testimonial.name}</h4>
+                    <p className="text-xs text-gray-400 uppercase tracking-wider">{testimonial.location}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="faq" className="py-24 bg-gray-50">
         <div className="container mx-auto px-6 max-w-4xl text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-black mb-4 text-solar-dark">Dúvidas <span className="text-solar-orange">Frequentes</span></h2>
