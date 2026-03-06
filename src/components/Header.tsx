@@ -35,7 +35,7 @@ export default function Header({ LOGO_URL, onAdminLogin, darkMode, toggleDarkMod
           <a href="#home" className="hover:text-solar-orange transition">Início</a>
           <a href="#quem-somos" className="hover:text-solar-orange transition">Quem Somos</a>
           <a href="#comece-aqui" className="hover:text-solar-orange transition">Comece Aqui</a>
-          <a href="#projetos" className="hover:text-solar-orange transition">Projetos</a>
+          <a href="#projetos" className="hover:text-solar-orange transition">Portfólio</a>
           <a href="#calculadora" className="hover:text-solar-orange transition">Simulador</a>
           <a href="#blog" className="hover:text-solar-orange transition">Blog</a>
           <a href="#conhecimento" className="hover:text-solar-orange transition">Conhecimento</a>

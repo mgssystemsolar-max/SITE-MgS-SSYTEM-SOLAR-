@@ -23,6 +23,10 @@ export default function AboutUs() {
               <p className="text-solar-dark dark:text-white font-bold text-lg">Compromisso com você</p>
               <p className="text-gray-500 dark:text-gray-400 text-sm">Márcio Gonçalves - Fundador</p>
               <p className="text-solar-orange font-bold text-xs uppercase mt-1 tracking-wider">Técnico em Eletrotécnica</p>
+              <p className="text-solar-dark dark:text-white text-xs font-bold uppercase mt-2 tracking-wider inline-flex items-center gap-2 bg-gray-100 dark:bg-white/10 px-3 py-1 rounded-full">
+                <i className="fas fa-id-card text-solar-orange"></i>
+                Com Registro Técnico do CFT
+              </p>
             </div>
             
             {/* Experience Badge */}
@@ -70,12 +74,14 @@ export default function AboutUs() {
             </div>
 
             <div className="flex items-center gap-4 mb-10 p-4 bg-gray-50 dark:bg-white/5 rounded-2xl border border-gray-100 dark:border-white/5 max-w-md">
-              <img 
-                src="https://drive.google.com/thumbnail?id=1n52Y50B7Am77t9yzAOpHdsVjrJ-TlVr8&sz=w1000" 
-                alt="Certificado Intelbras" 
-                className="h-12 w-auto object-contain"
-                referrerPolicy="no-referrer"
-              />
+              <div className="bg-white p-2 rounded-lg">
+                <img 
+                  src="https://drive.google.com/uc?export=view&id=1n52Y50B7Am77t9yzAOpHdsVjrJ-TlVr8" 
+                  alt="Certificado Intelbras" 
+                  className="h-16 w-auto object-contain"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
               <div>
                 <p className="font-bold text-solar-dark dark:text-white text-sm uppercase tracking-wide">Técnico Certificado</p>
                 <p className="text-xs text-gray-500 dark:text-gray-400">Especialista em soluções Intelbras</p>
