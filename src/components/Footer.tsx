@@ -81,9 +81,9 @@ export default function Footer({ LOGO_URL }: FooterProps) {
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-fade-in">
           <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-2xl max-w-lg w-full text-center relative animate-scale-up">
             <h3 className="text-2xl font-bold text-solar-orange mb-4">Luz do Mundo</h3>
-            <div className="rounded-xl overflow-hidden mb-6 border-4 border-solar-orange/20">
+            <div className="rounded-xl overflow-hidden mb-6 border-4 border-solar-orange/20 bg-gray-100 dark:bg-gray-800 min-h-[300px] flex items-center justify-center">
               <img 
-                src="https://images.unsplash.com/photo-1597926660683-9b678601f053?auto=format&fit=crop&q=80&w=800" 
+                src="https://lh3.googleusercontent.com/d/1mIm35e8EVRHeIj_5HXMjHJpxZTJrl3Ex" 
                 alt="Jesus Cristo - Luz do Mundo" 
                 className="w-full h-auto max-h-[60vh] object-contain mx-auto"
                 referrerPolicy="no-referrer"

@@ -25,9 +25,14 @@ export default function Hero() {
           className="lg:w-1/2 text-center lg:text-left"
         >
           <span className="text-solar-orange font-bold tracking-[0.2em] text-sm uppercase">Energia Inteligente</span>
-          <h1 className="text-4xl lg:text-6xl font-extrabold mt-4 mb-6 leading-tight">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-4xl lg:text-6xl font-extrabold mt-4 mb-6 leading-tight"
+          >
             Transforme o Sol em <br /><span className="text-solar-orange underline decoration-solar-orange/30 dark:decoration-white/20">Economia Real</span>
-          </h1>
+          </motion.h1>
           <p className="text-gray-500 dark:text-gray-400 text-lg mb-10 max-w-xl mx-auto lg:mx-0">
             Reduza sua conta de luz em até 95%. Projetos personalizados da MgS System Solar para <strong>Juazeiro do Norte e toda a região do Cariri</strong> com tecnologia de ponta e garantia de 25 anos.
           </p>
