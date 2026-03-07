@@ -158,11 +158,11 @@ export default function Portfolio({ isAdmin }: PortfolioProps) {
   };
 
   return (
-    <section id="projetos" className="py-24 bg-white dark:bg-solar-dark transition-colors duration-300">
+    <section id="projetos" className="py-24 bg-solar-dark text-white transition-colors duration-300">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-solar-orange font-bold tracking-[0.2em] text-sm uppercase">Nosso Portfólio</span>
-          <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-6 text-solar-dark dark:text-white">Obras que geram <span className="text-solar-orange underline">valor</span></h2>
+          <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-6 text-white">Obras que geram <span className="text-solar-orange underline">valor</span></h2>
         </div>
         
         {/* Interactive Map Filter */}
@@ -241,7 +241,7 @@ export default function Portfolio({ isAdmin }: PortfolioProps) {
           {isAdmin && (
             <div 
               onClick={() => fileInputRef.current?.click()}
-              className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer border-2 border-dashed border-gray-300 dark:border-gray-700 hover:border-solar-orange hover:bg-orange-50 dark:hover:bg-white/5 transition-all duration-300 flex flex-col items-center justify-center gap-4"
+              className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer border-2 border-dashed border-gray-700 hover:border-solar-orange hover:bg-white/5 transition-all duration-300 flex flex-col items-center justify-center gap-4"
             >
               <input 
                 type="file" 
@@ -251,7 +251,7 @@ export default function Portfolio({ isAdmin }: PortfolioProps) {
                 multiple
                 className="hidden" 
               />
-              <div className="w-16 h-16 rounded-full bg-gray-100 dark:bg-white/10 group-hover:bg-solar-orange/10 flex items-center justify-center text-gray-400 dark:text-gray-500 group-hover:text-solar-orange transition-colors duration-300">
+              <div className="w-16 h-16 rounded-full bg-white/10 group-hover:bg-solar-orange/10 flex items-center justify-center text-gray-500 group-hover:text-solar-orange transition-colors duration-300">
                 {isUploading ? (
                    <i className="fas fa-spinner fa-spin text-2xl"></i>
                 ) : (
@@ -259,10 +259,10 @@ export default function Portfolio({ isAdmin }: PortfolioProps) {
                 )}
               </div>
               <div className="text-center">
-                <h3 className="text-gray-500 dark:text-gray-400 font-bold group-hover:text-solar-orange transition-colors">
+                <h3 className="text-gray-400 font-bold group-hover:text-solar-orange transition-colors">
                   {isUploading ? "Processando..." : "Adicionar Fotos em Massa"}
                 </h3>
-                <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
+                <p className="text-xs text-gray-500 mt-1">
                   {isUploading ? "Aguarde..." : "Selecione várias imagens"}
                 </p>
               </div>
@@ -273,7 +273,7 @@ export default function Portfolio({ isAdmin }: PortfolioProps) {
         <div className="flex flex-col items-center gap-6 mt-12">
           <MysteryButton text="Veja a Luz que Inspira Nossas Obras" />
           
-          <a href="https://www.instagram.com/marciogoncalvesda176/" target="_blank" rel="noopener noreferrer" className="inline-block border-2 border-solar-dark dark:border-white text-solar-dark dark:text-white px-8 py-3 rounded-full font-bold hover:bg-solar-dark hover:text-white dark:hover:bg-white dark:hover:text-solar-dark transition">
+          <a href="https://www.instagram.com/marciogoncalvesda176/" target="_blank" rel="noopener noreferrer" className="inline-block border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-solar-dark transition">
             Ver Mais Projetos no Instagram
           </a>
         </div>

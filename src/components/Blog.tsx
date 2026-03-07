@@ -29,21 +29,21 @@ export default function Blog() {
   ];
 
   return (
-    <section id="blog" className="py-24 bg-gray-50 dark:bg-solar-card transition-colors duration-300">
+    <section id="blog" className="py-24 bg-solar-card transition-colors duration-300">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-solar-orange font-bold tracking-[0.2em] text-sm uppercase">Blog & Notícias</span>
-          <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-6 text-solar-dark dark:text-white">
+          <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-6 text-white">
             Fique por dentro do <span className="text-solar-orange underline decoration-solar-orange/30">Mundo Solar</span>
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Informação de qualidade para você economizar mais e entender tudo sobre o seu investimento.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <div key={post.id} className="bg-white dark:bg-solar-dark rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-white/5">
+            <div key={post.id} className="bg-solar-dark rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-white/5">
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src={post.image} 
@@ -58,10 +58,10 @@ export default function Blog() {
               </div>
               <div className="p-8">
                 <span className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2 block">{post.date}</span>
-                <h3 className="text-xl font-bold text-solar-dark dark:text-white mb-3 group-hover:text-solar-orange transition-colors line-clamp-2">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-solar-orange transition-colors line-clamp-2">
                   {post.title}
                 </h3>
-                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3">
+                <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3">
                   {post.excerpt}
                 </p>
                 <a href="#" className="inline-flex items-center text-solar-orange font-bold text-sm uppercase tracking-wider hover:gap-2 transition-all">
@@ -73,7 +73,7 @@ export default function Blog() {
         </div>
         
         <div className="mt-12 text-center">
-          <a href="#" className="inline-block border-2 border-solar-dark dark:border-white text-solar-dark dark:text-white px-8 py-3 rounded-full font-bold hover:bg-solar-dark hover:text-white dark:hover:bg-white dark:hover:text-solar-dark transition">
+          <a href="#" className="inline-block border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-solar-dark transition">
             Ver Todas as Notícias
           </a>
         </div>

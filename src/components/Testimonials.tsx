@@ -62,13 +62,13 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-24 bg-white dark:bg-solar-dark relative overflow-hidden transition-colors duration-300">
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-gray-50 to-white dark:from-solar-card dark:to-solar-dark -z-10"></div>
+    <section className="py-24 bg-solar-dark relative overflow-hidden transition-colors duration-300">
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-solar-card to-solar-dark -z-10"></div>
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-16">
           <span className="text-solar-orange font-bold tracking-[0.2em] text-sm uppercase">Prova Social</span>
-          <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-6 text-solar-dark dark:text-white">Quem usa, <span className="text-solar-orange underline decoration-solar-orange/30">recomenda</span></h2>
-          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">Veja o que nossos clientes de Juazeiro, Crato e Barbalha estão dizendo sobre a economia real.</p>
+          <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-6 text-white">Quem usa, <span className="text-solar-orange underline decoration-solar-orange/30">recomenda</span></h2>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">Veja o que nossos clientes de Juazeiro, Crato e Barbalha estão dizendo sobre a economia real.</p>
         </div>
         
         <div className="relative">
@@ -86,7 +86,7 @@ export default function Testimonials() {
                 >
                   <motion.div 
                     whileHover={{ y: -10 }}
-                    className="bg-white dark:bg-solar-card p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-white/10 flex flex-col h-full w-full relative group"
+                    className="bg-solar-card p-8 rounded-3xl shadow-xl border border-white/10 flex flex-col h-full w-full relative group"
                   >
                     <div className="absolute top-6 right-8 text-6xl text-solar-orange/10 font-serif leading-none group-hover:text-solar-orange/20 transition-colors">"</div>
                     <div className="flex-grow">
@@ -95,14 +95,14 @@ export default function Testimonials() {
                           <i key={star} className="fas fa-star text-solar-orange text-sm"></i>
                         ))}
                       </div>
-                      <p className="text-gray-600 dark:text-gray-300 italic mb-6 relative z-10 leading-relaxed">"{testimonial.quote}"</p>
+                      <p className="text-gray-300 italic mb-6 relative z-10 leading-relaxed">"{testimonial.quote}"</p>
                     </div>
-                    <div className="flex items-center gap-4 mt-auto pt-6 border-t border-gray-100 dark:border-white/10">
-                      <div className="w-12 h-12 bg-solar-dark dark:bg-white/10 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                    <div className="flex items-center gap-4 mt-auto pt-6 border-t border-white/10">
+                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white font-bold text-xl">
                         {testimonial.name.charAt(0)}
                       </div>
                       <div>
-                        <h4 className="font-bold text-solar-dark dark:text-white">{testimonial.name}</h4>
+                        <h4 className="font-bold text-white">{testimonial.name}</h4>
                         <p className="text-xs text-gray-400 uppercase tracking-wider flex items-center gap-1">
                           <i className="fas fa-map-marker-alt text-solar-orange"></i> {testimonial.location}
                         </p>
@@ -130,14 +130,14 @@ export default function Testimonials() {
             <div className="flex gap-4">
               <button 
                 onClick={prevTestimonial} 
-                className="w-12 h-12 rounded-full bg-white dark:bg-solar-card border border-gray-100 dark:border-white/10 shadow-lg flex items-center justify-center text-solar-dark dark:text-white hover:bg-solar-orange hover:text-white transition group"
+                className="w-12 h-12 rounded-full bg-solar-card border border-white/10 shadow-lg flex items-center justify-center text-white hover:bg-solar-orange hover:text-white transition group"
                 aria-label="Previous testimonial"
               >
                 <i className="fas fa-chevron-left group-hover:-translate-x-1 transition-transform"></i>
               </button>
               <button 
                 onClick={nextTestimonial} 
-                className="w-12 h-12 rounded-full bg-white dark:bg-solar-card border border-gray-100 dark:border-white/10 shadow-lg flex items-center justify-center text-solar-dark dark:text-white hover:bg-solar-orange hover:text-white transition group"
+                className="w-12 h-12 rounded-full bg-solar-card border border-white/10 shadow-lg flex items-center justify-center text-white hover:bg-solar-orange hover:text-white transition group"
                 aria-label="Next testimonial"
               >
                 <i className="fas fa-chevron-right group-hover:translate-x-1 transition-transform"></i>

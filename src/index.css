@@ -9,7 +9,8 @@
 
 @layer base {
   body {
-    @apply bg-solar-dark text-white;
+    background-color: #0a192f;
+    color: #ffffff;
   }
 }
 

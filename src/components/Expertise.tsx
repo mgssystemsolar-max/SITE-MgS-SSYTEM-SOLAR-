@@ -3,13 +3,13 @@ import MysteryButton from './MysteryButton';
 
 export default function Expertise() {
   return (
-    <section className="py-24 bg-white dark:bg-solar-dark text-gray-900 dark:text-white relative overflow-hidden transition-colors duration-300">
+    <section className="py-24 bg-solar-dark text-white relative overflow-hidden transition-colors duration-300">
       <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-5 dark:opacity-10"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="text-solar-orange font-bold tracking-[0.2em] text-sm uppercase">Nossa Expertise</span>
-          <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-6 text-solar-dark dark:text-white">O que faz um <span className="text-solar-orange underline decoration-solar-orange/30 dark:decoration-white/20">Integrador Solar</span>?</h2>
-          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">Muito mais que instalar placas, a MgS System Solar cuida de todo o ciclo do seu projeto para garantir eficiência e segurança.</p>
+          <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-6 text-white">O que faz um <span className="text-solar-orange underline decoration-white/20">Integrador Solar</span>?</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">Muito mais que instalar placas, a MgS System Solar cuida de todo o ciclo do seu projeto para garantir eficiência e segurança.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -35,12 +35,12 @@ export default function Expertise() {
               desc: "Acompanhamos a performance do seu sistema remotamente e oferecemos suporte contínuo para garantir que sua economia seja real e constante."
             }
           ].map((item, index) => (
-            <div key={index} className="bg-gray-50 dark:bg-white/5 p-8 rounded-3xl border border-gray-100 dark:border-white/10 hover:bg-white dark:hover:bg-white/10 hover:shadow-xl transition group duration-300">
+            <div key={index} className="bg-white/5 p-8 rounded-3xl border border-white/10 hover:bg-white/10 hover:shadow-xl transition group duration-300">
               <div className="w-14 h-14 bg-solar-orange rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-lg shadow-solar-orange/20 group-hover:scale-110 transition">
                 <i className={`fas ${item.icon}`}></i>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-solar-dark dark:text-white">{item.title}</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+              <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>

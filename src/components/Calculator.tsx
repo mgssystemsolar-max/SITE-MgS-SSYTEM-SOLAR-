@@ -26,11 +26,11 @@ export default function Calculator() {
   });
 
   return (
-    <section id="calculadora" className="py-24 bg-white dark:bg-solar-dark transition-colors duration-300">
+    <section id="calculadora" className="py-24 bg-solar-dark text-white transition-colors duration-300">
       <div className="container mx-auto px-6 text-center mb-12">
         <span className="text-solar-orange font-bold tracking-[0.2em] text-sm uppercase">Simulador Interativo</span>
-        <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-4 dark:text-white">Quanto você vai <span className="text-solar-orange underline">poupar</span>?</h2>
-        <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">Arraste o slider abaixo e descubra o impacto financeiro da energia solar no seu bolso e no seu patrimônio.</p>
+        <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-4 text-white">Quanto você vai <span className="text-solar-orange underline">poupar</span>?</h2>
+        <p className="text-gray-400 max-w-2xl mx-auto">Arraste o slider abaixo e descubra o impacto financeiro da energia solar no seu bolso e no seu patrimônio.</p>
       </div>
       <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
         <div className="bg-solar-dark rounded-3xl lg:rounded-[3rem] p-4 sm:p-6 md:p-10 lg:p-16 flex flex-col lg:flex-row gap-6 lg:gap-12 items-center border-b-4 lg:border-b-8 border-solar-orange shadow-2xl relative overflow-hidden">

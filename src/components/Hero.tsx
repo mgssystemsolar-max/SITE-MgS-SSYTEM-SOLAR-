@@ -14,7 +14,7 @@ export default function Hero() {
   const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
-    <section ref={ref} id="home" className="bg-white dark:bg-solar-dark text-gray-900 dark:text-white pt-36 pb-20 lg:pt-48 lg:pb-32 relative overflow-hidden transition-colors duration-300">
+    <section ref={ref} id="home" className="bg-solar-dark text-white pt-36 pb-20 lg:pt-48 lg:pb-32 relative overflow-hidden transition-colors duration-300">
       <motion.div 
         style={{ y: yBackground }} 
         className="absolute top-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"

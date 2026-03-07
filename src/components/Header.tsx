@@ -83,7 +83,7 @@ export default function Header({ LOGO_URL, onAdminLogin, darkMode, toggleDarkMod
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b transition-colors duration-300 ${darkMode ? 'bg-solar-dark/90 border-white/10 text-white' : 'bg-white/90 border-gray-100 text-gray-900'}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b transition-colors duration-300 bg-solar-dark/90 border-white/10 text-white`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div onClick={handleLogoClick} className="cursor-pointer select-none">
           <img src={LOGO_URL} alt="MgS System Solar" className="h-12 object-contain" />
@@ -111,7 +111,7 @@ export default function Header({ LOGO_URL, onAdminLogin, darkMode, toggleDarkMod
         <div className="flex items-center gap-4">
           <button 
             onClick={toggleDarkMode} 
-            className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${darkMode ? 'bg-white/10 hover:bg-white/20 text-yellow-400' : 'bg-gray-100 hover:bg-gray-200 text-gray-600'}`}
+            className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors bg-white/10 hover:bg-white/20 text-yellow-400`}
             title={darkMode ? "Mudar para Modo Claro" : "Mudar para Modo Escuro"}
           >
             <i className={`fas ${darkMode ? 'fa-sun' : 'fa-moon'}`}></i>
@@ -121,7 +121,7 @@ export default function Header({ LOGO_URL, onAdminLogin, darkMode, toggleDarkMod
       </div>
       
       {/* Scroll Progress Bar */}
-      <div className="absolute bottom-0 left-0 h-1 bg-gray-200 dark:bg-gray-700 w-full">
+      <div className="absolute bottom-0 left-0 h-1 bg-gray-700 w-full">
         <div 
           className="h-full bg-solar-orange transition-all duration-150 ease-out"
           style={{ width: `${scrollProgress * 100}%` }}

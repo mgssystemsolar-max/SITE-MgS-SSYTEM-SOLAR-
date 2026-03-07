@@ -75,15 +75,15 @@ export default function Contact() {
     <section id="contato" className="py-24 bg-solar-dark relative overflow-hidden">
       <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-solar-orange/10 to-transparent pointer-events-none"></div>
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto bg-white dark:bg-solar-card rounded-[2.5rem] p-8 md:p-12 shadow-2xl transition-colors duration-300">
+        <div className="max-w-4xl mx-auto bg-solar-card rounded-[2.5rem] p-8 md:p-12 shadow-2xl transition-colors duration-300">
           <div className="text-center mb-10">
-            <h2 className="text-3xl lg:text-4xl font-black text-solar-dark dark:text-white mb-4">Solicite seu <span className="text-solar-orange">Orçamento Gratuito</span></h2>
-            <p className="text-gray-500 dark:text-gray-400">Preencha os dados abaixo e receba uma proposta personalizada para sua casa ou empresa.</p>
+            <h2 className="text-3xl lg:text-4xl font-black text-white mb-4">Solicite seu <span className="text-solar-orange">Orçamento Gratuito</span></h2>
+            <p className="text-gray-400">Preencha os dados abaixo e receba uma proposta personalizada para sua casa ou empresa.</p>
           </div>
           <form className="space-y-6" onSubmit={handleFormSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Nome Completo <span className="text-red-500">*</span></label>
+                <label className="text-sm font-bold text-gray-300 ml-1">Nome Completo <span className="text-red-500">*</span></label>
                 <input 
                   type="text" 
                   name="name"
@@ -91,12 +91,12 @@ export default function Contact() {
                   onChange={handleInputChange}
                   onBlur={handleBlur}
                   placeholder="Seu nome" 
-                  className={`w-full bg-gray-50 dark:bg-solar-dark border ${formErrors.name ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'} rounded-xl px-4 py-3 focus:outline-none focus:border-solar-orange focus:ring-1 focus:ring-solar-orange transition dark:text-white`} 
+                  className={`w-full bg-solar-dark border ${formErrors.name ? 'border-red-500' : 'border-gray-700'} rounded-xl px-4 py-3 focus:outline-none focus:border-solar-orange focus:ring-1 focus:ring-solar-orange transition text-white`} 
                 />
                 {formErrors.name && <p className="text-red-500 text-xs ml-1">{formErrors.name}</p>}
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">WhatsApp <span className="text-red-500">*</span></label>
+                <label className="text-sm font-bold text-gray-300 ml-1">WhatsApp <span className="text-red-500">*</span></label>
                 <input 
                   type="tel" 
                   name="whatsapp"
@@ -104,14 +104,14 @@ export default function Contact() {
                   onChange={handleInputChange}
                   onBlur={handleBlur}
                   placeholder="(88) 99999-9999" 
-                  className={`w-full bg-gray-50 dark:bg-solar-dark border ${formErrors.whatsapp ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'} rounded-xl px-4 py-3 focus:outline-none focus:border-solar-orange focus:ring-1 focus:ring-solar-orange transition dark:text-white`} 
+                  className={`w-full bg-solar-dark border ${formErrors.whatsapp ? 'border-red-500' : 'border-gray-700'} rounded-xl px-4 py-3 focus:outline-none focus:border-solar-orange focus:ring-1 focus:ring-solar-orange transition text-white`} 
                 />
                 {formErrors.whatsapp && <p className="text-red-500 text-xs ml-1">{formErrors.whatsapp}</p>}
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Cidade/UF <span className="text-red-500">*</span></label>
+                <label className="text-sm font-bold text-gray-300 ml-1">Cidade/UF <span className="text-red-500">*</span></label>
                 <input 
                   type="text" 
                   name="city"
@@ -119,17 +119,17 @@ export default function Contact() {
                   onChange={handleInputChange}
                   onBlur={handleBlur}
                   placeholder="Ex: Juazeiro do Norte, CE" 
-                  className={`w-full bg-gray-50 dark:bg-solar-dark border ${formErrors.city ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'} rounded-xl px-4 py-3 focus:outline-none focus:border-solar-orange focus:ring-1 focus:ring-solar-orange transition dark:text-white`} 
+                  className={`w-full bg-solar-dark border ${formErrors.city ? 'border-red-500' : 'border-gray-700'} rounded-xl px-4 py-3 focus:outline-none focus:border-solar-orange focus:ring-1 focus:ring-solar-orange transition text-white`} 
                 />
                 {formErrors.city && <p className="text-red-500 text-xs ml-1">{formErrors.city}</p>}
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Concessionária</label>
+                <label className="text-sm font-bold text-gray-300 ml-1">Concessionária</label>
                 <select 
                   name="concessionaria"
                   value={formData.concessionaria}
                   onChange={handleInputChange}
-                  className="w-full bg-gray-50 dark:bg-solar-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-solar-orange focus:ring-1 focus:ring-solar-orange transition text-gray-600 dark:text-gray-300"
+                  className="w-full bg-solar-dark border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-solar-orange focus:ring-1 focus:ring-solar-orange transition text-gray-300"
                 >
                   <option value="">Selecione...</option>
                   <option value="Enel">Enel</option>
@@ -138,7 +138,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Valor Médio da Conta de Luz (R$) <span className="text-red-500">*</span></label>
+              <label className="text-sm font-bold text-gray-300 ml-1">Valor Médio da Conta de Luz (R$) <span className="text-red-500">*</span></label>
               <input 
                 type="number" 
                 name="billValue"
@@ -146,7 +146,7 @@ export default function Contact() {
                 onChange={handleInputChange}
                 onBlur={handleBlur}
                 placeholder="Ex: 500,00" 
-                className={`w-full bg-gray-50 dark:bg-solar-dark border ${formErrors.billValue ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'} rounded-xl px-4 py-3 focus:outline-none focus:border-solar-orange focus:ring-1 focus:ring-solar-orange transition dark:text-white`} 
+                className={`w-full bg-solar-dark border ${formErrors.billValue ? 'border-red-500' : 'border-gray-700'} rounded-xl px-4 py-3 focus:outline-none focus:border-solar-orange focus:ring-1 focus:ring-solar-orange transition text-white`} 
               />
               {formErrors.billValue && <p className="text-red-500 text-xs ml-1">{formErrors.billValue}</p>}
             </div>

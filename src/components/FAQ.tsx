@@ -40,16 +40,16 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-24 bg-gray-50 dark:bg-solar-card transition-colors duration-300">
+    <section id="faq" className="py-24 bg-solar-card transition-colors duration-300">
       <div className="container mx-auto px-6 max-w-4xl text-center mb-16">
-        <h2 className="text-3xl lg:text-5xl font-black mb-4 text-solar-dark dark:text-white">Dúvidas <span className="text-solar-orange">Frequentes</span></h2>
+        <h2 className="text-3xl lg:text-5xl font-black mb-4 text-white">Dúvidas <span className="text-solar-orange">Frequentes</span></h2>
       </div>
       <div className="container mx-auto px-6 max-w-3xl space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="bg-white dark:bg-solar-dark rounded-2xl shadow-sm overflow-hidden">
+          <div key={index} className="bg-solar-dark rounded-2xl shadow-sm overflow-hidden">
             <button 
               onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)} 
-              className="w-full p-6 text-left flex justify-between items-center font-bold text-lg text-solar-dark dark:text-white hover:bg-gray-50 dark:hover:bg-white/5 transition"
+              className="w-full p-6 text-left flex justify-between items-center font-bold text-lg text-white hover:bg-white/5 transition"
             >
               {faq.question}
               <i className={`fas fa-chevron-down text-solar-orange transition-transform duration-300 ${openFaqIndex === index ? 'rotate-180' : 'rotate-0'}`}></i>
@@ -60,7 +60,7 @@ export default function FAQ() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="overflow-hidden"
             >
-              <div className="px-6 pb-6 text-gray-500 dark:text-gray-400 leading-relaxed">
+              <div className="px-6 pb-6 text-gray-400 leading-relaxed">
                 {faq.answer}
               </div>
             </motion.div>

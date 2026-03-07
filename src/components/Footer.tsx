@@ -8,24 +8,24 @@ export default function Footer({ LOGO_URL }: FooterProps) {
   const [showJesus, setShowJesus] = useState(false);
 
   return (
-    <footer className="bg-gray-100 dark:bg-solar-dark text-gray-600 dark:text-white pt-20 pb-10 transition-colors duration-300 relative">
+    <footer className="bg-solar-dark text-white pt-20 pb-10 transition-colors duration-300 relative">
       <div className="container mx-auto px-6 text-center md:text-left grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
-          <img src={LOGO_URL} alt="MgS System Solar" className="h-16 mb-6 mx-auto md:mx-0 object-contain bg-white dark:bg-white/10 rounded-lg p-2 shadow-sm" />
-          <p className="text-gray-500 dark:text-gray-400 text-sm">Especialistas em energia limpa e redução de custos. Atendemos residências e empresas com excelência.</p>
+          <img src={LOGO_URL} alt="MgS System Solar" className="h-16 mb-6 mx-auto md:mx-0 object-contain bg-white/10 rounded-lg p-2 shadow-sm" />
+          <p className="text-gray-400 text-sm">Especialistas em energia limpa e redução de custos. Atendemos residências e empresas com excelência.</p>
         </div>
         <div>
-          <h4 className="font-bold text-lg mb-6 border-l-4 border-solar-orange pl-4 uppercase text-gray-900 dark:text-white">Redes Sociais</h4>
+          <h4 className="font-bold text-lg mb-6 border-l-4 border-solar-orange pl-4 uppercase text-white">Redes Sociais</h4>
           <div className="flex justify-center md:justify-start space-x-6 text-2xl text-solar-orange">
-            <a href="https://www.instagram.com/marciogoncalvesda176/" target="_blank" rel="noopener noreferrer" className="hover:text-solar-dark dark:hover:text-white transition"><i className="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61577300515359&locale=pt_BR" target="_blank" rel="noopener noreferrer" className="hover:text-solar-dark dark:hover:text-white transition"><i className="fab fa-facebook"></i></a>
-            <a href="https://www.youtube.com/channel/UCQGzIxvn_I1uqved_psc9oQ" target="_blank" rel="noopener noreferrer" className="hover:text-solar-dark dark:hover:text-white transition"><i className="fab fa-youtube"></i></a>
-            <a href="https://wa.me/message/24V75JFH4PNMB1" target="_blank" rel="noopener noreferrer" className="hover:text-solar-dark dark:hover:text-white transition"><i className="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/marciogoncalvesda176/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><i className="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61577300515359&locale=pt_BR" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><i className="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/channel/UCQGzIxvn_I1uqved_psc9oQ" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><i className="fab fa-youtube"></i></a>
+            <a href="https://wa.me/message/24V75JFH4PNMB1" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><i className="fab fa-whatsapp"></i></a>
           </div>
         </div>
         <div>
-          <h4 className="font-bold text-lg mb-6 border-l-4 border-solar-orange pl-4 uppercase text-gray-900 dark:text-white">Contato & Endereço</h4>
-          <div className="text-gray-500 dark:text-gray-400 text-sm space-y-4">
+          <h4 className="font-bold text-lg mb-6 border-l-4 border-solar-orange pl-4 uppercase text-white">Contato & Endereço</h4>
+          <div className="text-gray-400 text-sm space-y-4">
             <p>
               <a href="mailto:mgssystemsolarclientes@gmail.com" className="hover:text-solar-orange transition flex items-center justify-center md:justify-start gap-2">
                 <i className="fas fa-envelope text-solar-orange"></i>
@@ -53,7 +53,7 @@ export default function Footer({ LOGO_URL }: FooterProps) {
 
       {/* Mensagem Inspiradora */}
       <div className="container mx-auto px-6 mt-12 flex justify-center">
-        <div className="flex items-center gap-4 bg-white dark:bg-white/5 px-6 py-3 rounded-full shadow-sm border border-gray-100 dark:border-white/5 max-w-2xl">
+        <div className="flex items-center gap-4 bg-white/5 px-6 py-3 rounded-full shadow-sm border border-white/5 max-w-2xl">
           <div className="relative group cursor-pointer" onClick={() => setShowJesus(true)}>
             <img 
               src="https://images.unsplash.com/photo-1541103554737-fe33e243b45c?auto=format&fit=crop&q=80&w=100&h=100" 
@@ -65,23 +65,23 @@ export default function Footer({ LOGO_URL }: FooterProps) {
               Clique aqui
             </span>
           </div>
-          <p className="text-sm font-medium text-gray-600 dark:text-gray-300 italic text-center md:text-left">
+          <p className="text-sm font-medium text-gray-300 italic text-center md:text-left">
             "E a porta que Deus abre, ninguém fecha; e a que Ele fecha, é livramento."
           </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-6 mt-8 pt-8 border-t border-gray-200 dark:border-white/5 text-center text-xs text-gray-500 dark:text-gray-600">
+      <div className="container mx-auto px-6 mt-8 pt-8 border-t border-white/5 text-center text-xs text-gray-600">
         <p>© 2026 MgS System Solar - Todos os direitos reservados.</p>
-        <p className="mt-2 text-gray-500 dark:text-gray-700">CNPJ: 62.612.258/0001-04</p>
+        <p className="mt-2 text-gray-700">CNPJ: 62.612.258/0001-04</p>
       </div>
 
       {/* Modal Jesus */}
       {showJesus && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-fade-in">
-          <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-2xl max-w-lg w-full text-center relative animate-scale-up">
+          <div className="bg-gray-900 p-6 rounded-2xl shadow-2xl max-w-lg w-full text-center relative animate-scale-up">
             <h3 className="text-2xl font-bold text-solar-orange mb-4">Luz do Mundo</h3>
-            <div className="rounded-xl overflow-hidden mb-6 border-4 border-solar-orange/20 bg-gray-100 dark:bg-gray-800 min-h-[300px] flex items-center justify-center">
+            <div className="rounded-xl overflow-hidden mb-6 border-4 border-solar-orange/20 bg-gray-800 min-h-[300px] flex items-center justify-center">
               <img 
                 src="https://lh3.googleusercontent.com/d/1mIm35e8EVRHeIj_5HXMjHJpxZTJrl3Ex" 
                 alt="Jesus Cristo - Luz do Mundo" 
@@ -89,7 +89,7 @@ export default function Footer({ LOGO_URL }: FooterProps) {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <p className="text-gray-600 dark:text-gray-300 italic mb-6">
+            <p className="text-gray-300 italic mb-6">
               "Eu sou a luz do mundo; quem me segue não andará em trevas, mas terá a luz da vida."
             </p>
             <button 

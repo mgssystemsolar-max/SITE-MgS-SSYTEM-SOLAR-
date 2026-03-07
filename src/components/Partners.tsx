@@ -24,18 +24,18 @@ export default function Partners() {
   ];
 
   return (
-    <section ref={containerRef} className="py-20 bg-white dark:bg-solar-dark border-b border-gray-100 dark:border-white/10 transition-colors duration-300 overflow-hidden">
+    <section ref={containerRef} className="py-20 bg-solar-dark border-b border-white/10 transition-colors duration-300 overflow-hidden">
       <div className="container mx-auto px-6">
         
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 bg-green-900/30 text-green-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
             <i className="fas fa-check-circle"></i> Instalador Homologado e Certificado no Ceará
           </div>
-          <h2 className="text-3xl lg:text-4xl font-black text-solar-dark dark:text-white mb-4">
+          <h2 className="text-3xl lg:text-4xl font-black text-white mb-4">
             Nossos Parceiros Tecnológicos e <span className="text-solar-orange">Fornecedores Globais</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Trabalhamos exclusivamente com marcas Tier 1 para garantir a máxima eficiência em **Energia Solar no Cariri** e todo o Nordeste.
           </p>
         </div>
@@ -49,7 +49,7 @@ export default function Partners() {
               target="_blank"
               rel="noopener noreferrer"
               style={{ y: index % 2 === 0 ? y1 : y2 }}
-              className="group flex items-center justify-center p-8 bg-gray-50 dark:bg-white/5 rounded-2xl border border-gray-100 dark:border-white/5 hover:border-solar-orange/30 hover:shadow-lg transition-all duration-300"
+              className="group flex items-center justify-center p-8 bg-white/5 rounded-2xl border border-white/5 hover:border-solar-orange/30 hover:shadow-lg transition-all duration-300"
               title={`Equipamentos ${partner.name} para Energia Solar Cariri`}
             >
               <PartnerLogo 
@@ -63,18 +63,18 @@ export default function Partners() {
         </div>
 
         {/* Seção MGS Academy Integrada */}
-        <div className="bg-gray-50 dark:bg-solar-card rounded-3xl p-8 md:p-12 border border-gray-100 dark:border-white/5 relative overflow-hidden">
+        <div className="bg-solar-card rounded-3xl p-8 md:p-12 border border-white/5 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-solar-orange/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
             <div>
-              <h3 className="text-2xl font-bold text-solar-dark dark:text-white mb-4">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 Hub de Tecnologia Solar do Cariri
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-6 leading-relaxed">
                 A **MgS System Solar** valida tecnologias mundiais para a realidade de Juazeiro do Norte. Através da <span className="font-bold text-solar-orange">MGS Academy</span>, formamos a elite dos projetistas fotovoltaicos do Ceará usando equipamentos destes parceiros globais.
               </p>
-              <p className="text-gray-600 dark:text-gray-300 text-sm italic border-l-4 border-solar-orange pl-4">
+              <p className="text-gray-300 text-sm italic border-l-4 border-solar-orange pl-4">
                 "Nossos alunos são treinados com tecnologia de ponta, consolidando a confiança das maiores fabricantes em cada projeto homologado pela MgS."
               </p>
             </div>
@@ -83,8 +83,8 @@ export default function Partners() {
               <div className="w-16 h-16 bg-solar-orange/10 rounded-full flex items-center justify-center text-solar-orange text-2xl mb-4">
                 <i className="fas fa-graduation-cap"></i>
               </div>
-              <h4 className="font-bold text-solar-dark dark:text-white mb-2">Acesse nossa Formação Técnica</h4>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-6 max-w-xs">
+              <h4 className="font-bold text-white mb-2">Acesse nossa Formação Técnica</h4>
+              <p className="text-sm text-gray-400 mb-6 max-w-xs">
                 Aprenda a projetar e homologar com quem domina o sol do Nordeste.
               </p>
               <button 

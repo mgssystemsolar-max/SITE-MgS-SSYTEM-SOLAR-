@@ -42,14 +42,14 @@ export default function MgsAcademy() {
   ];
 
   return (
-    <section id="academy" className="py-24 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <section id="academy" className="py-24 bg-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-solar-orange font-bold tracking-[0.2em] text-sm uppercase">Educação e Ferramentas</span>
-          <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-6 text-solar-dark dark:text-white">
+          <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-6 text-white">
             MgS <span className="text-solar-orange">ACADEMY</span>
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Formação técnica e ferramentas exclusivas para profissionais que buscam excelência no setor solar.
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function MgsAcademy() {
             <motion.div 
               key={index}
               whileHover={{ y: -10 }}
-              className="bg-white dark:bg-solar-card rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-white/5 flex flex-col"
+              className="bg-solar-card rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-white/5 flex flex-col"
             >
               <div className={`h-2 bg-gradient-to-r ${course.color}`}></div>
               <div className="p-8 flex-grow flex flex-col">
@@ -67,7 +67,7 @@ export default function MgsAcademy() {
                   <i className={`fas ${course.icon}`}></i>
                 </div>
                 
-                <h3 className="text-xl font-black text-solar-dark dark:text-white mb-1 leading-tight">
+                <h3 className="text-xl font-black text-white mb-1 leading-tight">
                   {course.title}
                 </h3>
                 {course.subtitle && (
@@ -76,7 +76,7 @@ export default function MgsAcademy() {
                   </span>
                 )}
                 
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-8 leading-relaxed flex-grow">
+                <p className="text-gray-400 text-sm mb-8 leading-relaxed flex-grow">
                   {course.description}
                 </p>
 
@@ -94,7 +94,7 @@ export default function MgsAcademy() {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-gray-600 dark:text-gray-300 font-medium italic text-lg max-w-3xl mx-auto border-t border-gray-200 dark:border-white/10 pt-8">
+          <p className="text-gray-300 font-medium italic text-lg max-w-3xl mx-auto border-t border-white/10 pt-8">
             "Aprenda com quem já transformou o cenário energético do Cariri. <br className="hidden md:block" />
             <span className="text-solar-orange font-bold">MgS System Solar:</span> Mais que energia, geramos conhecimento."
           </p>
