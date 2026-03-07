@@ -1,4 +1,5 @@
 import React from 'react';
+import PartnerLogo from './PartnerLogo';
 
 export default function Partners() {
   const partners = [
@@ -40,16 +41,11 @@ export default function Partners() {
               className="group flex items-center justify-center p-8 bg-gray-50 dark:bg-white/5 rounded-2xl border border-gray-100 dark:border-white/5 hover:border-solar-orange/30 hover:shadow-lg transition-all duration-300"
               title={`Equipamentos ${partner.name} para Energia Solar Cariri`}
             >
-              <img 
+              <PartnerLogo 
                 src={`https://logo.clearbit.com/${partner.domain}`} 
                 alt={`${partner.name} - Especialista em Energia Solar Cariri`} 
-                loading="lazy" 
+                fallbackText={partner.name}
                 className="max-h-12 w-auto grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.parentElement!.innerText = partner.name;
-                  e.currentTarget.parentElement!.classList.add('text-gray-500', 'font-bold', 'text-sm', 'text-center');
-                }}
               />
             </a>
           ))}
