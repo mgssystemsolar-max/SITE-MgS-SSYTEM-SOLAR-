@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import PartnerLogo from './PartnerLogo';
 
 export default function Partners() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -30]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, 30]);
+
   const partners = [
     { name: 'WEG Solar Cariri', domain: 'weg.net', url: 'https://www.weg.net' },
     { name: 'Canadian Solar Juazeiro', domain: 'canadiansolar.com', url: 'https://www.canadiansolar.com' },
@@ -14,7 +24,7 @@ export default function Partners() {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-solar-dark border-b border-gray-100 dark:border-white/10 transition-colors duration-300">
+    <section ref={containerRef} className="py-20 bg-white dark:bg-solar-dark border-b border-gray-100 dark:border-white/10 transition-colors duration-300 overflow-hidden">
       <div className="container mx-auto px-6">
         
         {/* Header Section */}
@@ -32,12 +42,13 @@ export default function Partners() {
 
         {/* Logos Grid com Lazy Loading e SEO */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {partners.map((partner) => (
-            <a 
+          {partners.map((partner, index) => (
+            <motion.a 
               key={partner.name}
               href={partner.url}
               target="_blank"
               rel="noopener noreferrer"
+              style={{ y: index % 2 === 0 ? y1 : y2 }}
               className="group flex items-center justify-center p-8 bg-gray-50 dark:bg-white/5 rounded-2xl border border-gray-100 dark:border-white/5 hover:border-solar-orange/30 hover:shadow-lg transition-all duration-300"
               title={`Equipamentos ${partner.name} para Energia Solar Cariri`}
             >
@@ -47,7 +58,7 @@ export default function Partners() {
                 fallbackText={partner.name}
                 className="max-h-12 w-auto grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
               />
-            </a>
+            </motion.a>
           ))}
         </div>
 
