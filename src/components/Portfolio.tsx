@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import MysteryButton from './MysteryButton';
+import PortfolioMap from './PortfolioMap';
 
 interface PortfolioProps {
   isAdmin: boolean;
@@ -15,6 +16,7 @@ export default function Portfolio({ isAdmin }: PortfolioProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [toast, setToast] = useState<{ show: boolean, message: string } | null>(null);
   const [isUploading, setIsUploading] = useState(false);
+  const [selectedCity, setSelectedCity] = useState<string | null>(null);
   const [projects, setProjects] = useState<Project[]>([
     { img: "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&q=80&w=800&fm=webp", title: "Residência Alto Padrão", loc: "Juazeiro do Norte, CE" },
     { img: "https://images.unsplash.com/photo-1559302504-64aae6ca6b6f?auto=format&fit=crop&q=80&w=800&fm=webp", title: "Indústria Têxtil", loc: "Barbalha, CE" },
@@ -32,6 +34,11 @@ export default function Portfolio({ isAdmin }: PortfolioProps) {
       }
     }
   }, []);
+
+  // Filter projects based on selected city
+  const filteredProjects = selectedCity 
+    ? projects.filter(p => p.loc.includes(selectedCity))
+    : projects;
 
   // Helper to resize image and convert to Base64
   const processImage = (file: File): Promise<string> => {
@@ -74,7 +81,6 @@ export default function Portfolio({ isAdmin }: PortfolioProps) {
     const files = event.target.files;
     if (files && files.length > 0) {
       setIsUploading(true);
-      const newProjects: Project[] = [];
       
       try {
         // Process all files
@@ -141,6 +147,12 @@ export default function Portfolio({ isAdmin }: PortfolioProps) {
           <h2 className="text-3xl lg:text-5xl font-black mt-2 mb-6 text-solar-dark dark:text-white">Obras que geram <span className="text-solar-orange underline">valor</span></h2>
         </div>
         
+        {/* Interactive Map Filter */}
+        <PortfolioMap 
+          selectedCity={selectedCity} 
+          onSelectCity={setSelectedCity} 
+        />
+        
         {/* Admin Controls */}
         {isAdmin && (
           <div className="flex justify-end mb-6 gap-4">
@@ -158,46 +170,54 @@ export default function Portfolio({ isAdmin }: PortfolioProps) {
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projects.map((project, i) => (
-            <div key={i} className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
-              <img 
-                src={project.img} 
-                alt={project.title} 
-                className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
-                referrerPolicy="no-referrer"
-                loading='lazy'
-                width="800"
-                height="600"
-                decoding="async"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-8">
-                <div className="transform translate-y-4 group-hover:translate-y-0 transition duration-500">
-                  <h3 className="text-white font-bold text-xl mb-1">{project.title}</h3>
-                  <p className="text-solar-orange text-sm font-bold uppercase tracking-wider flex items-center gap-2">
-                    <i className="fas fa-map-marker-alt"></i> {project.loc}
-                  </p>
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((project, i) => (
+              <div key={i} className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                <img 
+                  src={project.img} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                  loading='lazy'
+                  width="800"
+                  height="600"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-8">
+                  <div className="transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                    <h3 className="text-white font-bold text-xl mb-1">{project.title}</h3>
+                    <p className="text-solar-orange text-sm font-bold uppercase tracking-wider flex items-center gap-2">
+                      <i className="fas fa-map-marker-alt"></i> {project.loc}
+                    </p>
+                  </div>
                 </div>
-              </div>
-              
-              <button 
-                onClick={(e) => { e.stopPropagation(); handleShareProject(project); }}
-                className="absolute top-4 right-4 bg-white/10 backdrop-blur-md border border-white/20 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-solar-orange hover:border-solar-orange transition-all duration-300 z-20 opacity-0 group-hover:opacity-100 transform translate-y-[-10px] group-hover:translate-y-0"
-                title="Compartilhar"
-              >
-                <i className="fas fa-share-alt"></i>
-              </button>
-
-              {isAdmin && (
+                
                 <button 
-                  onClick={(e) => { e.stopPropagation(); handleDeleteProject(i); }}
-                  className="absolute top-4 left-4 bg-red-500 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-red-600 transition z-20"
-                  title="Excluir Projeto"
+                  onClick={(e) => { e.stopPropagation(); handleShareProject(project); }}
+                  className="absolute top-4 right-4 bg-white/10 backdrop-blur-md border border-white/20 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-solar-orange hover:border-solar-orange transition-all duration-300 z-20 opacity-0 group-hover:opacity-100 transform translate-y-[-10px] group-hover:translate-y-0"
+                  title="Compartilhar"
                 >
-                  <i className="fas fa-trash-alt"></i>
+                  <i className="fas fa-share-alt"></i>
                 </button>
-              )}
+
+                {isAdmin && (
+                  <button 
+                    onClick={(e) => { e.stopPropagation(); handleDeleteProject(i); }}
+                    className="absolute top-4 left-4 bg-red-500 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-red-600 transition z-20"
+                    title="Excluir Projeto"
+                  >
+                    <i className="fas fa-trash-alt"></i>
+                  </button>
+                )}
+              </div>
+            ))
+          ) : (
+            <div className="col-span-3 text-center py-12 text-gray-500">
+              <i className="fas fa-search text-4xl mb-4 opacity-50"></i>
+              <p>Nenhum projeto encontrado nesta cidade.</p>
+              <button onClick={() => setSelectedCity(null)} className="text-solar-orange underline mt-2">Ver todos</button>
             </div>
-          ))}
+          )}
           
           {/* Upload Card - Only visible to Admin */}
           {isAdmin && (
