@@ -39,9 +39,9 @@ export default function Header({ LOGO_URL, onAdminLogin, darkMode, toggleDarkMod
       const sections = [
         'home', 
         'quem-somos', 
-        'comece-aqui', 
         'projetos', 
         'calculadora', 
+        'financiamento',
         'blog', 
         'conhecimento', 
         'faq',
@@ -73,9 +73,9 @@ export default function Header({ LOGO_URL, onAdminLogin, darkMode, toggleDarkMod
   const navLinks = [
     { id: 'home', label: 'Início' },
     { id: 'quem-somos', label: 'Quem Somos' },
-    { id: 'comece-aqui', label: 'Comece Aqui' },
     { id: 'projetos', label: 'Portfólio' },
     { id: 'calculadora', label: 'Simulador' },
+    { id: 'financiamento', label: 'Planos' },
     { id: 'blog', label: 'Blog' },
     { id: 'conhecimento', label: 'Conhecimento' },
     { id: 'faq', label: 'Dúvidas' },

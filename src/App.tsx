@@ -16,6 +16,7 @@ const Testimonials = lazy(() => import('./components/Testimonials'));
 const Expertise = lazy(() => import('./components/Expertise'));
 const SolarKnowledge = lazy(() => import('./components/SolarKnowledge'));
 const MgsAcademy = lazy(() => import('./components/MgsAcademy'));
+const Financing = lazy(() => import('./components/Financing'));
 const FAQ = lazy(() => import('./components/FAQ'));
 const PostSales = lazy(() => import('./components/PostSales'));
 const Emergency = lazy(() => import('./components/Emergency'));
@@ -62,6 +63,7 @@ export default function App() {
         <Blog />
         <SolarKnowledge />
         <MgsAcademy />
+        <Financing />
         <FAQ />
         <PostSales />
         <Emergency />
