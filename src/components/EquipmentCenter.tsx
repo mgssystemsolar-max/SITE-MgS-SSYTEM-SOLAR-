@@ -2,11 +2,32 @@ import React from 'react';
 import { motion } from 'motion/react';
 
 export default function EquipmentCenter() {
+  const reviews = [
+    {
+      name: "João P.",
+      location: "Crato, CE",
+      text: "Comprei o inversor off-grid recomendado pelo Márcio e a instalação foi um sucesso. Adeus quedas de energia!",
+      rating: 5
+    },
+    {
+      name: "Maria S.",
+      location: "Juazeiro do Norte, CE",
+      text: "A vitrine da Amazon facilitou muito a compra dos cabos e conectores. Tudo chegou rápido e com qualidade garantida.",
+      rating: 5
+    },
+    {
+      name: "Carlos E.",
+      location: "Barbalha, CE",
+      text: "Atendimento excelente pelo WhatsApp. O catálogo me ajudou a escolher a bateria certa pro meu sistema.",
+      rating: 5
+    }
+  ];
+
   const equipmentLinks = [
     {
       title: "Sistemas Off-Grid",
       subtitle: "Inversores e Baterias",
-      description: "Equipamentos selecionados a dedo para sistemas isolados. Alta durabilidade e eficiência para quem precisa de independência total da rede.",
+      description: "Independência energética total! Inversores e baterias de alta performance para você gerar e armazenar sua própria energia. Diga adeus aos apagões com máxima eficiência.",
       icon: "fas fa-car-battery",
       link: "https://www.amazon.com.br/shop/marciogoncalvesda176/list/39BLN8QUJFRUX",
       buttonText: "Ver Lista na Amazon",
@@ -96,6 +117,46 @@ export default function EquipmentCenter() {
               </a>
             </motion.div>
           ))}
+        </div>
+
+        {/* Customer Reviews Section */}
+        <div className="mt-24">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+              O que dizem nossos <span className="text-solar-orange">clientes</span>
+            </h3>
+            <p className="text-gray-400">Quem comprou com nossas recomendações, aprova e confia.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {reviews.map((review, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors"
+              >
+                <div className="flex text-yellow-400 text-sm mb-4 gap-1">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <i key={i} className="fas fa-star"></i>
+                  ))}
+                </div>
+                <p className="text-gray-300 italic mb-6 text-sm leading-relaxed">
+                  "{review.text}"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-solar-orange/20 flex items-center justify-center text-solar-orange font-bold">
+                    {review.name.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="text-white font-bold text-sm">{review.name}</p>
+                    <p className="text-gray-500 text-xs">{review.location}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Shopee Teaser */}
